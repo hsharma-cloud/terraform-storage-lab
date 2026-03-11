@@ -110,3 +110,43 @@ This project demonstrates key cloud engineering concepts:
 - Cloud storage deployment
 - Terraform automation
 - CI/CD for infrastructure
+
+---
+
+## Architecture Diagram
+
+```
+                +------------------+
+                |   Terraform CLI  |
+                +------------------+
+                         |
+                         |
+                         v
+               +----------------------+
+               |   Azure Resource     |
+               |      Group           |
+               +----------------------+
+                         |
+                         v
+               +----------------------+
+               |  Azure Storage       |
+               |     Account          |
+               +----------------------+
+                         |
+                         v
+               +----------------------+
+               |  Blob Container      |
+               |     (Object Storage) |
+               +----------------------+
+                         |
+                         v
+               +----------------------+
+               |   Stored Files       |
+               | (images, logs, etc) |
+               +----------------------+
+```
+
+This diagram represents how Terraform provisions cloud storage infrastructure in Azure.
+
+Terraform defines the infrastructure configuration and deploys Azure resources automatically.
+  
